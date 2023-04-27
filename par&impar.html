@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./favicon_io/android-chrome-192x192.png"type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon_io/apple-touch-icon.png"type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon_io/favicon.ico"type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>par&impar</title>
+</head>
+<body>
+    <h1>É par ou Impar</h1>
+    <input placeholder="Digite seu número" type="number" id="numero">
+    <button class="glow-on-hover" type="button" onclick="parOuImpar()">Diga-me se é par ou ímpar</button>
+</body>
+<script>
+    const input = document.getElementById("numero")
+
+    function parOuImpar() {
+        if (input.value === "") {
+            alert("Por favor, informe um número!")
+            return
+        }
+
+        const resto = input.value % 2
+
+        if (resto == 0) {
+            alert("O número é Par")
+        } else {
+            alert("O número é Impar")
+        }
+    }
+</script>
+</html>
